@@ -403,13 +403,13 @@ methods: {
 >
 > Toyota Celica, Ford Mondeo, Porsche Boxter
 
-주의! 예제에서 다룬 코드는 간략하게 보기위해 backend와 통신하는게 아닌 alert를 출력하여서 확인함.
+❗ 예제에서 다룬 코드는 간략하게 보기위해 backend와 통신하는게 아닌 alert를 출력하여서 확인함.
 
 
 
 ### 👉 그룹화
 
-! 그룹화는 **AG Grid Enterprise 전용 기능**. 주의!
+❗ 그룹화는 **AG Grid Enterprise 전용 기능**. 주의!
 
 사용자가 많은 양의 데이터를 이해하는데 효과적임.
 

@@ -1,16 +1,22 @@
-# Ag-Grid
-
-자바스크립트 기반 오픈 소스 그리드.
-
-무료와 상용이 구분되있는데 무료도 왠만한 기능을 지원하고, 상용의 경우 서버사이드랜더링, 엑셀추출, Tree등 지원함.
+# 📖 AG-Grid
 
 https://www.ag-grid.com/
 
 공식문서와 타 블로그 정리글들을 보면서 정리해 볼 예정
 
+이번 글은 공식문서 튜토리얼 페이지를 보고 정리.
 
 
-## Add AG Grid
+
+**AG-Grid**
+
+자바스크립트 기반 오픈 소스 그리드.
+
+무료와 상용이 구분되있는데 무료도 왠만한 기능을 지원하고, 상용의 경우 서버사이드랜더링, 엑셀추출, Tree등 지원함.
+
+
+
+## 🌏 Add AG Grid
 
 ```shell
 npm install -g @vue/cli
@@ -52,7 +58,7 @@ theme중 하나인 ag-theme-alpine.css를 가져옴.
 
 
 
-### 테마의 종류
+### 👉 테마의 종류
 
 * ag-theme-alpine : 모던한 스타일, 높은 contrast, 일반적인 padding값이 적용됨.
 * ag-theme-apline-dark : alpine의 dark버전
@@ -62,7 +68,7 @@ theme중 하나인 ag-theme-alpine.css를 가져옴.
 
 
 
-## Example Code 
+## 🌏 Example Code 
 
 데이터를 출력하는데 중요한 것은 **rowData와 columDefs**.<br/>
 
@@ -72,7 +78,7 @@ columDefs는 열속성을, rowData는 출력될 데이터들.
 
 
 
-### 시작하기
+### 👉 시작하기
 
 ```vue
 <template>
@@ -132,7 +138,7 @@ colum으로 make, model, pice를 가지고,<br/>rowData에 make값은 'Toyota', 
 
 
 
-### 정렬 및 필터링
+### 👉 정렬 및 필터링
 
 **정렬**을 하고싶다면? =>  **sortable속성**을 true로 설정하면된다.
 
@@ -154,7 +160,7 @@ this.columnDefs = [
 
 
 
-### 원격 데이터 가져오기
+### 👉 원격 데이터 가져오기
 
 원격 서버에서 데이터를 가져와보자.
 
@@ -178,11 +184,11 @@ beforeMount() {
 
 
 
-### 선택 활성화
+### 👉 선택 활성화
 
 그리드에서 특정 행을 선택하고, 시스템에서 플래그가 지정된 것으로 표시하도록 허용해야함.
 
-전체 코드
+#### 전체 코드
 
 ```vue
 <template>
@@ -234,7 +240,7 @@ export default {
 
 
 
-바뀐점
+#### 살펴 보자
 
 ```vue
 <template>
@@ -265,13 +271,13 @@ beforeMount(){
 
 
 
-### 선택된 데이터를 가져와 서버로 보내기
+### 👉 선택된 데이터를 가져와 서버로 보내기
 
 AG Grid API를 사용
 
 gridReady이벤트에 그리드 및 열 API 모두에 대한 참조를 저장함.
 
-전체 코드 
+#### 전체 코드 
 
 ```vue
 <template>
@@ -336,7 +342,7 @@ gridReady이벤트에 그리드 및 열 API 모두에 대한 참조를 저장함
 
 
 
-살펴보자.
+#### 살펴 보자
 
 ```vue
 <template>
@@ -401,7 +407,7 @@ methods: {
 
 
 
-### 그룹화
+### 👉 그룹화
 
 ! 그룹화는 **AG Grid Enterprise 전용 기능**. 주의!
 
@@ -424,7 +430,7 @@ npm install --save ag-grid-enterprise
 
 
 
-main.js
+#### main.js
 
 ```javascript
 import Vue from 'vue';
@@ -444,7 +450,7 @@ import App from './App';
 
 그룹화를 활성화해보자!
 
-전체 코드
+#### 전체 코드
 
 ```vue
 <template>
@@ -520,7 +526,7 @@ import App from './App';
 
 
 
-살펴 보자
+#### 살펴 보자
 
 ```vue
 <template>
@@ -567,3 +573,15 @@ grid는 이제 make로 그룹화하고,  model확장 시 필드 값을 나열함
 groupSelectionChildren 속성은 그룹의 모든 항목을 선택/선택 해제하는 group-level checkbox를 추가함.
 
 autoGroupColumnDef를 사용하여 columnDefs에서 checkboxSelection을 삭제함.
+
+
+
+## 📘 참고
+
+https://www.ag-grid.com/vue-data-grid/vue3/
+
+https://www.ag-grid.com/vue-data-grid/grid-api/
+
+https://eblo.tistory.com/29
+
+https://dong-queue.tistory.com/57

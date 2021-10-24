@@ -1,4 +1,4 @@
-# Vue data Grid : Client-Side Data - Transaction Updates
+# 📖 Vue data Grid : Client-Side Data - Transaction Updates
 
 많은 행을 효율적인 방식으로 추가, 제거 또는 업데이트 할 수 있습니다.
 
@@ -10,13 +10,13 @@ https://www.ag-grid.com/vue-data-grid/data-update-transactions/
 
 위 주소의 글을 보고 사용했습니다.
 
-## 트랜잭션 업데이트 API
+## 🌏 트랜잭션 업데이트 API
 
-트랜잭션 개체에는 추가,제거 및 업데이트 해야하는 행에 대한 세부정보가 포함되있습니다.
+트랜잭션 개체에는 추가, 제거 및 업데이트 해야하는 행에 대한 세부정보가 포함되있습니다.
 
 applyTransaction(transaction)는 이 트랜잭션 개체를 가져와 그리드의 데이터에 적용합니다.
 
-**applyTransaction** : 행 데이터를 업데이트 합니다. add, remove및 update에 대한 목록이 있는 트랜잭션 개체를 전달합니다.
+>**applyTransaction** : 행 데이터를 업데이트 합니다. <br/>**add, remove및 update**에 대한 목록이 있는 **트랜잭션 개체를 전달**합니다.
 
 
 
@@ -27,9 +27,9 @@ applyTransaction(transaction)는 이 트랜잭션 개체를 가져와 그리드�
 
 
 
-## Example
+## 🌏 Example
 
-주의할점! **Add 는 항목을 추가, Update는 있는 항목의 데이터를 수정, delete는 항목을 삭제.**
+❗ 주의! **Add 는 항목을 추가, Update는 있는 항목의 데이터를 수정, delete는 항목을 삭제.**
 
 내가 해야될게 리스트에 추가하는 동작인데 나는 추가한 리스트를 다시 update를 한다 생각해서 계속 update를 시도해 제대로 동작하지 않았었다.
 
@@ -47,7 +47,7 @@ applyTransaction(transaction)는 이 트랜잭션 개체를 가져와 그리드�
 
 
 
-## 업데이트 및 제거를 위한 행 식별
+## 🌏 업데이트 및 제거를 위한 행 식별
 
 두 가지의 접근 방식이 있다.
 
@@ -91,16 +91,24 @@ const myTransaction = {
 
 
 
-### 개체 참조 사용 (느림)
+### 🌏 개체 참조 사용 (느림)
 
 행에 대한 ID를 제공하지 않으면 그리드가 개체 참조를 사용하여 행을 비교함.
 
 트랜잭션에 업데이트 또는 제거항목을 제공하면 그리드는 이전에 제공한 데이터에 대한 ===연사자를 사용해 해당 행을 찾음.
 
-주의!
+❗ **주의!**
 
 행 데이터 항목은 동일한 인스턴스를 사용해야함.<br/>동일한 개체의 다른 인스턴스를 사용하면 그리드가 비교되지 않음.
 
 그리드에는 개체 참조를 기반으로 행을 인덱싱할 방법이 없기 대문에 식별을 위해 개체 참조를 사용하면 대용량 데이터 세트의 경우 속도가 느려짐.
 
 개체참조를 사용하면 속도가 느리다. (그러나 큰 데이터 세트(1만개 이상)로 작업하는 경우만 문제됨.)
+
+
+
+
+
+## 📘 참고
+
+https://www.ag-grid.com/vue-data-grid/data-update-transactions/

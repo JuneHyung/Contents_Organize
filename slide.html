@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test</title>
+  <style>
+    .outBox{
+      width:1000px; 
+      height:500px;
+      margin:0 auto;
+      position:relative;
+      overflow:hidden;
+    }
+    .inBox{
+      width:100%; height:100%;
+      position:absolute;
+      left:0;
+      display:flex;
+      /* animation-name: slideLeft; */
+      animation-name:slideRight;
+      animation-duration: 5s;
+    }
+    .leftBox{
+      width:50%;height:100%;
+      background-color: red
+    }
+    .rightBox{
+      width:50%;height:100%;
+      background-color: blue
+    }
+
+    @keyframes slideLeft{
+      from{
+        width:0;
+        margin-left:-100%;
+      }to{
+        width:100%;
+        margin-left:0;
+      }
+    }
+    @keyframes slideRight{
+      from{
+        width:0;
+        margin-left:100%;
+      }to{
+        width:100%;
+        margin-left:0;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="outBox">
+    <div class="inBox">
+    <div class="leftBox" ></div>
+    <div class="rightBox"></div>
+  </div>
+  </div>
+</body>
+</html>

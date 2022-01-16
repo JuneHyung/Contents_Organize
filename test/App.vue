@@ -2,18 +2,22 @@
   <img alt="Vue logo" src="./assets/logo.png">
   <div style="width:500px; height:500px; margin: 0 auto; border:1px solid black" >
   <div style="padding:4px"> 
-    <j-input v-model:value="input1" :data="input1"></j-input>
+    <j-input :data="searchInfo"></j-input>
   </div>
-  <div style="height:20px">{{input1}}</div>
+  <div style="height:20px">{{searchInfo.astsId}}</div>
   <div style="padding:4px"> 
-    <j-input-number v-model:value="inputNumber" :data="inputNumber"></j-input-number>
+    <j-input-number :data="searchInfo"></j-input-number>
   </div>
-  <div style="height:20px">{{inputNumber}}</div>
+  <div style="height:20px">{{searchInfo.inputNumber}}</div>
+
   <div style="padding:4px"> 
-    <j-select v-model:value="selected" :data="selected" :dataList="selectList"></j-select>
+    <j-select :data="searchInfo" :dataList="selectList"></j-select>
   </div>
-  <div style="height:20px">{{selected}}</div>
+  <div style="height:20px">{{searchInfo.selected}}</div>
   </div>
+  
+  <button @click="outputTest">출력Test</button>
+
 </template>
 
 <script>
@@ -29,7 +33,11 @@ export default {
     JSelect,
   },
   setup(){
-    const input1 = ref(null);
+    const searchInfo = ref({
+      astsId: null,
+      inputNumber: null,
+      selected: null,
+    });
     const inputNumber = ref(null);
     const selected = ref(null);
     const selectList = ref([
@@ -47,11 +55,15 @@ export default {
       },
 
     ])
+    const outputTest = function(){
+      console.log(searchInfo.value.astsId);
+    }
     return{
-      input1,
+      searchInfo,
       inputNumber,
       selected,
       selectList,
+      outputTest,
     }
   }
 }

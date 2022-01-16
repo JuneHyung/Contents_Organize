@@ -1,5 +1,6 @@
 <template>
    <a-select
+   v-model:value="getData.selected"
     placeholder="Select users"
     :allowClear="true"
     show-search
@@ -14,13 +15,12 @@
 </template>
 
 <script>
-import { ref, computed} from 'vue';
+import { ref} from 'vue';
 export default {
   props:['data','dataList'],
   setup(props){
-    const getDataList = computed({
-      get:()=>props.dataList,
-    })
+    const getData = ref(props.data)
+    const getDataList = ref(props.dataList)
     const changeBackground = function(){
       boxBgColor.value = 'red'
     }
@@ -42,6 +42,7 @@ export default {
       handleCtrlC,
       handleCtrlX,
       handleCtrlV,
+      getData,
       getDataList,
     }
   }

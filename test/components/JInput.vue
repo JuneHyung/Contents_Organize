@@ -1,15 +1,13 @@
 <template>
-  <a-input v-model="getData" size="small" :allowClear="true" @cut="handleCtrlX" @copy="handleCtrlC" @paste="handleCtrlV" :style="{width: boxWidth+'px', height:20+'px', borderColor: boxBgColor}"></a-input>
+  <a-input v-model:value="getData.astsId" size="small" :allowClear="true" @cut="handleCtrlX" @copy="handleCtrlC" @paste="handleCtrlV" :style="{width: boxWidth+'px', height:20+'px', borderColor: boxBgColor}"></a-input>
 </template>
 
 <script>
-import { ref, computed} from 'vue';
+import { ref} from 'vue';
 export default {
   props:['data'],
   setup(props){
-    const getData = computed({
-      get:()=>props.data,
-    })
+    const getData = ref(props.data)
     const changeBackground = function(){
       boxBgColor.value = 'red'
     }

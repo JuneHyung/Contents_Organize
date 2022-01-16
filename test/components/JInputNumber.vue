@@ -1,6 +1,6 @@
 <template>
   <a-input-number 
-  v-model="getData" 
+  v-model:value="getData.inputNumber" 
   size="small" 
   :allowClear="true" 
   :formatter="getData => `${getData}`.replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
@@ -8,14 +8,11 @@
 </template>
 
 <script>
-import { ref, computed} from 'vue';
+import { ref} from 'vue';
 export default {
   props:['data'],
   setup(props){
-    const getData = computed({
-      get:()=>props.data,
-      set:(val)=> val
-    })
+    const getData =ref(props.data)
     const boxWidth = ref(120)
     return{
       getData,

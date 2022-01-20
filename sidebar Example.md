@@ -1,3 +1,5 @@
+https://github.com/yaminncco/vue-sidebar-menu/tree/next
+
 ```javascript
 import VueSidebarMenu from 'vue-sidebar-menu'
 import 'vue-sidebar-menu/dist/vue-sidebar-menu.css'

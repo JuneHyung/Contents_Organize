@@ -1,0 +1,1 @@
+https://negabaro.github.io/archive/js-isEmpty

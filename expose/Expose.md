@@ -1,4 +1,4 @@
-# Template Refs
+# 🐳Template Refs
 
 Vue의 선언적 렌더링 모델은 대부분의 직접 DOM 작업을 추상화하지만 <br/>기본 DOM 요소에 직접 액세스해야 하는 경우가 있을 수 있다.
 
@@ -12,7 +12,7 @@ ref속성을 사용.
 
 
 
-## Ref on Component
+## 🌏 Ref on Component
 
 child Component에서도 ref를 사용할 수 있다.
 
@@ -45,7 +45,7 @@ export default {
 
 
 
-## expose
+## 🌏 expose
 
 expose옵션을 사용해 자식 인스턴스에 대한 액세스를 제한할 수 있습니다.
 
@@ -71,7 +71,7 @@ export default {
 
 
 
-## Example Code
+## 🌏 Example Code
 
 ### App.vue
 
@@ -180,6 +180,6 @@ setup(props, {expose}){
 
 ![expose-rowData,columnDefs](./expose-rowData,columnDefs.png)
 
-## 참고
+## 📘 참고
 
 [vuejs.org](https://vuejs.org/guide/essentials/template-refs.html)

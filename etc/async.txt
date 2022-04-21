@@ -1,0 +1,4 @@
+﻿https://ko.javascript.info/async-await
+https://one-it.tistory.com/entry/Promise-정리-asyncawait-사용법-then과의-차이
+https://velog.io/@pilyeooong/Promise와-asyncawait-차이점
+https://inpa.tistory.com/entry/JS-📚-비동기처리-async-await

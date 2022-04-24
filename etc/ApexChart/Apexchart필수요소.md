@@ -8,8 +8,8 @@
 * [Event](./Event설명.md)
 * [Formatting](./Formatting설명.md)
 * [Localization](https://apexcharts.com/docs/localization/)
-* [Tooltip]
-* [Grid]
-* [Legend]
+* [Tooltip](./ToolTip설명.md)
+* [Grid](./Grid설명.md)
+* [Legend](./Legend설명.md)
 
 Responsive, Animations는 공식문서를 참고.
